@@ -11,17 +11,18 @@ class InicioSesion:
         self.window.geometry('400x350')
         self.window.configure(bg="#f0f0f0")
         
-        frame = Frame(self.window, bg="white", padx=20, pady=20, relief=RIDGE, bd=2)
+        frame = Frame(self.window, bg="white", padx=20, pady=20, bd=2)
         frame.place(relx=0.5, rely=0.5, anchor=CENTER)
-        
         Label(frame, text="INICIO DE SESIÓN", font=("Arial", 16, "bold"), bg="white", fg="#333").grid(row=0, column=0, columnspan=2, pady=10)
         
-        Label(frame, text="Correo Electrónico", font=("Arial", 12), bg="pink").grid(row=1, column=0, pady=10, sticky="e")
+        self.correoLabel=Label(frame, text="Correo Electrónico", bg="pink", font=("Arial", 12))
+        self.correoLabel.grid(row=1, column=0, sticky="e", pady=10)
         self.correo = StringVar()
         self.cuadroCorreo = Entry(frame, textvariable=self.correo, font=("Arial", 12), width=25, relief=SOLID, bd=1)
         self.cuadroCorreo.grid(row=1, column=1, pady=10, padx=10)
         
-        Label(frame, text="Contraseña", font=("Arial", 12), bg="pink").grid(row=2, column=0, pady=10, sticky="e")
+        self.contraLabel=Label(frame, text="Correo Electrónico", bg="pink", font=("Arial", 12))
+        self.contraLabel.grid(row=2, column=0, sticky="e", pady=10)
         self.contraseña = StringVar()
         self.cuadroContraseña = Entry(frame, textvariable=self.contraseña, show="*", font=("Arial", 12), width=25, relief=SOLID, bd=1)
         self.cuadroContraseña.grid(row=2, column=1, pady=10, padx=10)
