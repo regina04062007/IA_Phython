@@ -56,7 +56,7 @@ def consulta1():
     resultado1 = df_archivo_1.query("city == 'SACRAMENTO'  and beds==3 and price>100000")
     
     ventana_resultado1 = tk.Toplevel()
-    ventana_resultado1.title("Consulta 1")
+    ventana_resultado1.title("Consulta 1: ciudad sacreamento, número de camas=3 y precio mayor a 100000")
     
     frame_resultado1 = tk.Text(ventana_resultado1, height=40, width=200, bg="#91dded")
     frame_resultado1.pack(padx=10, pady=10)
@@ -68,7 +68,7 @@ def consulta2():
     resultado2 = df_archivo_1.query("type == 'Multi-Family' and price < 180000")
 
     ventana_resultado2 = tk.Toplevel()
-    ventana_resultado2.title("Consulta 2")
+    ventana_resultado2.title("Consulta 2: propiedades de tipo Multi-Family con precio menor a 180000")
 
     frame_resultado2 = tk.Text(ventana_resultado2, height=20, width=150, bg="#9aed91")
     frame_resultado2.pack(padx=10, pady=10)
@@ -81,7 +81,7 @@ def consulta3():
     resultado3 = df_archivo_1.query("baths>=2 and price>120000")
     
     ventana_resultado3 = tk.Toplevel()
-    ventana_resultado3.title("Consulta 3")
+    ventana_resultado3.title("Consulta 3:propiedades con 2 o más baños y precio mayor a 120,000. ")
     
     frame_resultado3 = tk.Text(ventana_resultado3, height=20, width=150, bg="#919aed")
     frame_resultado3.pack(padx=10, pady=10)
@@ -93,7 +93,7 @@ def consulta4():
     resultado4 = df_archivo_1.query("type == 'Condo'").sort_values(by="price", ascending=False)
     
     ventana_resultado4 = tk.Toplevel()
-    ventana_resultado4.title("Consulta 4")
+    ventana_resultado4.title("Consulta 4: propiedades tipo Condo y ordenar el precio de manera descendente")
     
     frame_resultado4 = tk.Text(ventana_resultado4, height=40, width=200, bg="#ec91ed")
     frame_resultado4.pack(padx=10, pady=10)
@@ -105,7 +105,7 @@ def consulta5():
     resultado5 = df_archivo_1.query("city=='CITRUS HEIGHTS' and beds>2")
     
     ventana_resultado5 = tk.Toplevel()
-    ventana_resultado5.title("Consulta 5")
+    ventana_resultado5.title("Consulta 5: propiedades en la ciudad citrus heights con más de 2 camas")
     
     frame_resultado5 = tk.Text(ventana_resultado5, height=40, width=200, bg="#b791ed")
     frame_resultado5.pack(padx=10, pady=10)
@@ -117,7 +117,7 @@ def consulta6():
     resultado6 = df_archivo_1.query("city in ['SACRAMENTO', 'RANCHO CORDOVA'] and price>90000 and beds==2")
     
     ventana_resultado6 = tk.Toplevel()
-    ventana_resultado6.title("Consulta 6")
+    ventana_resultado6.title("Consulta 6: propiedades en la ciudad sacramento o racho cordova con un precio mayor a 90,000 y que tengan  2 camas")
     
     frame_resultado6 = tk.Text(ventana_resultado6, height=40, width=200, bg="#ed91a2")
     frame_resultado6.pack(padx=10, pady=10)
@@ -129,7 +129,7 @@ def consulta7():
     resultado7 = df_archivo_1.query("price>=90000 and price<=100000").sort_values(by="beds", ascending=True)
     
     ventana_resultado7 = tk.Toplevel()
-    ventana_resultado7.title("Consulta 7")
+    ventana_resultado7.title("Consulta 7: propiedades conn precio de 90000 y 100000, y ordenarlas por la cantidad de camas de menor a mayor")
     
     frame_resultado7 = tk.Text(ventana_resultado7, height=40, width=200, bg="#91edd1")
     frame_resultado7.pack(padx=10, pady=10)
@@ -141,7 +141,7 @@ def consulta8():
     resultado8 = df_archivo_1.query("city == 'NORTH HIGHLANDS' and price > 150000 and baths == 2")
 
     ventana_resultado8 = tk.Toplevel()
-    ventana_resultado8.title("Consulta 8")
+    ventana_resultado8.title("Consulta 8: propiedades en nort5h highlands con precio mayor a 150000 y 2 baños")
 
     frame_resultado8 = tk.Text(ventana_resultado8, height=40, width=200, bg="#c4ed91")
     frame_resultado8.pack(padx=10, pady=10)
@@ -153,7 +153,7 @@ def consulta9():
     resultado9 = df_archivo_1.query("type=='Residential' and city=='ELK GROVE' and sq__ft>1000 and price>100000")
     
     ventana_resultado9 = tk.Toplevel()
-    ventana_resultado9.title("Consulta 9")
+    ventana_resultado9.title("Consulta 9: propiedades de tipo condo en la ciudad elk grove que tengan mas de 1000 pies cuadrados y precio sea mayor a 100000")
     
     frame_resultado9 = tk.Text(ventana_resultado9, height=40, width=200, bg="#edd191")
     frame_resultado9.pack(padx=10, pady=10)
@@ -165,7 +165,7 @@ def consulta10():
     resultado10 = df_archivo_1.query("price>=50000 and price<=150000").sort_values(by="zip", ascending=True)
     
     ventana_resultado10 = tk.Toplevel()
-    ventana_resultado10.title("Consulta 10")
+    ventana_resultado10.title("Consulta 10:  propiedades con precio de 50,000 a 150,000, ordenadas por zip")
     
     frame_resultado10 = tk.Text(ventana_resultado10, height=40, width=200, bg="#eda891")
     frame_resultado10.pack(padx=10, pady=10)
